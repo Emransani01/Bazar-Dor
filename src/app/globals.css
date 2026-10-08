@@ -1,26 +1,156 @@
 @import "tailwindcss";
+@plugin "daisyui";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f0f5f0;
+  --surface: #fafcfa;
+
+  --text-primary: #1d271f;
+  --text-secondary: #5f6962;
+  --text-muted: #7a837d;
+
+  --primary: #05893e;
+  --primary-dark: #048039;
+  --primary-soft: #e8f4eb;
+  --primary-text: #f3fbf4;
+
+  --border: #e1e8e1;
+  --border-dark: rgba(29, 39, 31, 0.2);
+  --divider: #f0f5f0;
+
+  /* Price change colors */
+  --price-up: #16a34a;
+  --price-down: #e53935;
+
+  --hover-chip: #dadeda;
+  --hover-chip-border: #ccd0cc;
+
+  --active-chip: #048039;
+  --active-chip-border: #047c37;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
+  min-height: 100vh;
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-primary);
+  font-family: var(--font-bengali), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: #d9f0df;
+  color: var(--primary-dark);
+}
+
+/* --------------------------------------------------
+   Common helpers
+-------------------------------------------------- */
+
+.page-background {
+  background: var(--background);
+}
+
+.surface {
+  background: var(--surface);
+}
+
+.content-width {
+  width: min(1120px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+/* --------------------------------------------------
+   Price ticker
+-------------------------------------------------- */
+
+.ticker-track {
+  animation: ticker-scroll 35s linear infinite;
+  will-change: transform;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* --------------------------------------------------
+   Loading skeleton
+-------------------------------------------------- */
+
+.skeleton {
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+  background: #e3e9e3;
+  border-radius: 8px;
+}
+
+@keyframes skeleton-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.55;
+  }
+}
+
+/* --------------------------------------------------
+   Scrollbars
+-------------------------------------------------- */
+
+.horizontal-scroll {
+  scrollbar-width: none;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* --------------------------------------------------
+   Responsive
+-------------------------------------------------- */
+
+@media (max-width: 640px) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .content-width {
+    width: calc(100% - 32px);
+  }
 }

@@ -36,10 +36,13 @@
 
 `https://api.api-store.workers.dev/api/bazardor`
 
+## Screenshot
+
+![Bazar Dor Screenshot](./Bazar-Dor.PNG)
+
 ## Getting Started
 
 প্রথমে dependencies install করো:
 
 ```bash
 npm install
-```

@@ -9,6 +9,8 @@ const mongoClient = new MongoClient(
 const db = mongoClient.db("bazar-dor");
 
 export const auth = betterAuth({
+  baseURL: process.env.BETTER_AUTH_URL,
+
   database: mongodbAdapter(db),
 
   emailAndPassword: {
@@ -27,3 +29,4 @@ export const auth = betterAuth({
     },
   },
 });
+

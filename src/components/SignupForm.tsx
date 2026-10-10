@@ -67,7 +67,7 @@ export default function SignupForm() {
       if (data) {
         toast.success("অ্যাকাউন্ট সফলভাবে তৈরি হয়েছে.");
 
-        router.push("/");
+        router.push("/signin");
         router.refresh();
       }
     } catch {

@@ -1,4 +1,3 @@
-
 # 🛒 Bazar Dor — বাজার দর
 
 ### প্রতিদিনের প্রয়োজনীয় পণ্যের বাজারদর এক নজরে
@@ -38,19 +37,19 @@ Bazar Dor is a Bengali-first market price web application that helps users explo
 
 ## 🧰 Technologies Used
 
-| Technology | Purpose |
-|---|---|
-| ⚛️ [React](https://react.dev/) | Build reusable UI components |
-| ▲ [Next.js](https://nextjs.org/) | Application framework and rendering |
-| 🧭 Next.js App Router | File-based routing and page navigation |
-| 📘 [TypeScript](https://www.typescriptlang.org/) | Type-safe application development |
-| 🎨 [Tailwind CSS](https://tailwindcss.com/) | Utility-first styling and responsive layouts |
-| 🌼 [DaisyUI](https://daisyui.com/) | Reusable UI styling components |
-| 🔐 [Better Auth](https://www.better-auth.com/) | Authentication and session management |
-| 🍃 [MongoDB](https://www.mongodb.com/) | Database integration |
-| 🔔 [React Hot Toast](https://react-hot-toast.com/) | Success and error notifications |
-| 🎯 [Lucide React](https://lucide.dev/) | Icons for the user interface |
-| 🚀 [Vercel](https://vercel.com/) | Application deployment |
+| Technology                                         | Purpose                                      |
+| -------------------------------------------------- | -------------------------------------------- |
+| ⚛️ [React](https://react.dev/)                     | Build reusable UI components                 |
+| ▲ [Next.js](https://nextjs.org/)                   | Application framework and rendering          |
+| 🧭 Next.js App Router                              | File-based routing and page navigation       |
+| 📘 [TypeScript](https://www.typescriptlang.org/)   | Type-safe application development            |
+| 🎨 [Tailwind CSS](https://tailwindcss.com/)        | Utility-first styling and responsive layouts |
+| 🌼 [DaisyUI](https://daisyui.com/)                 | Reusable UI styling components               |
+| 🔐 [Better Auth](https://www.better-auth.com/)     | Authentication and session management        |
+| 🍃 [MongoDB](https://www.mongodb.com/)             | Database integration                         |
+| 🔔 [React Hot Toast](https://react-hot-toast.com/) | Success and error notifications              |
+| 🎯 [Lucide React](https://lucide.dev/)             | Icons for the user interface                 |
+| 🚀 [Vercel](https://vercel.com/)                   | Application deployment                       |
 
 ---
 
@@ -58,7 +57,11 @@ Bazar Dor is a Bengali-first market price web application that helps users explo
 
 Bazar Dor uses the following API to retrieve product and category information.
 
-**Primary API**
+**Main API**
+
+`https://openapi.programming-hero.com/api/bazardor`
+
+**Alternative API**
 
 `https://api.api-store.workers.dev/api/bazardor`
 
@@ -68,13 +71,13 @@ Bazar Dor uses the following API to retrieve product and category information.
 
 ### Available Endpoints
 
-| Endpoint | Description |
-|---|---|
-| `/products` | Retrieve all products |
+| Endpoint                  | Description                   |
+| ------------------------- | ----------------------------- |
+| `/products`               | Retrieve all products         |
 | `/products?category=chal` | Retrieve products by category |
-| `/products/1` | Retrieve a single product |
-| `/categories` | Retrieve all categories |
-| `/categories/chal` | Retrieve a single category |
+| `/products/1`             | Retrieve a single product     |
+| `/categories`             | Retrieve all categories       |
+| `/categories/chal`        | Retrieve a single category    |
 
 ---
 
@@ -136,7 +139,7 @@ npm run start
 
 The application can be deployed to a supported hosting platform such as Vercel.
 
-- **Live Website:** [Add your deployed website URL here](https://vercel.com/)
+- **Live Website:** [https://bazar-dor-sage.vercel.app/](https://vercel.com/)
 - **GitHub Repository:** [Emransani01/Bazar-Dor](https://github.com/Emransani01/Bazar-Dor)
 
 Make sure the required environment variables are configured in the hosting platform before deployment.
